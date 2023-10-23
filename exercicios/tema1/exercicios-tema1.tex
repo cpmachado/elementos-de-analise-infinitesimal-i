@@ -9,7 +9,7 @@
 \usepackage{mathtools}
 \usepackage{enumitem}
 \usepackage{csquotes}
-\usepackage[citestyle=authoryear]{biblatex}
+\usepackage[citestyle=authortitle]{biblatex}
 \usepackage[hidelinks]{hyperref}
 
 \addbibresource{bibliografia.bib}
@@ -33,12 +33,19 @@
 	pdfproducer = {}
 }
 
-\newtheorem{proposicao}{Proposição}
-
 \input{exercicios/ex-cmds.tex}
 
 \begin{document}
 \maketitle
+
+\section*{Introdução}
+\phantomsection
+\addcontentsline{toc}{section}{Introdução}
+
+\paragraph{} Todos os exercícios referem se à bibliografia obrigatória da
+cadeira\parencite{Santos2016}.
+
+\vspace{1cm}
 
 \input{exercicios/tema1/seccao1-3.tex}
 %\input{exercicios/tema1/seccao1-4.tex}
@@ -47,7 +54,6 @@
 
 \clearpage
 
-\nocite{*}
 \printbibliography[title={Bibliografia},heading=bibintoc]
 
 \end{document}
