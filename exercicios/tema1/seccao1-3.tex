@@ -1,0 +1,52 @@
+\seccao{1.3}
+
+\exercicio{8}
+
+\begin{equation}\label{eq:1.3-8}
+	x_n =
+	\begin{cases}
+		1, &n = 0\\
+		x_n(x_n + 1), &n \in \mathbb{N}_0
+	\end{cases}
+\end{equation}
+
+\begin{enumerate}[label=(\alph*)]
+	\item
+		\begin{proposition}
+			Para qualquer $n \in \mathbb{N}_0$, tem-se que $x_n > 0$, onde
+			$x_n$ é a sucessão definida na equação \ref{eq:1.3-8}.
+		\end{proposition}
+		\begin{proof}
+			\hfill
+			\begin{enumerate}[label=\arabic*.]
+				\item Começamos com o caso $n = 0$: temos $x_0 = 1 > 0$, que é
+					uma afirmação verdadeira.
+				\item Fixamos agora um $n \in \mathbb{N}_0$ e assumimos que
+					\begin{align*}
+						&\text{Hipótese}:\quad  x_n > 0.
+						\intertext{Queremos mostrar que:}
+						&\text{Tese}: \quad\quad  x_{n + 1} > 0.
+						\intertext{Comecemos por considerar a Hipótese,}
+						&x_n > 0 \iff x_n + 1 > 1
+						\intertext{Pela Hipótese, podemos
+							multiplicar ambos os termos da inequação sem
+						inverter o sinal, pelo que se tem}
+						&x_{n + 1} = x_n(x_n + 1) > x_n > 0
+					\end{align*}
+			\end{enumerate}
+		\end{proof}
+	\item
+		\begin{proposition}
+			Para qualquer $n \in \mathbb{N}$, tem-se que $x_n$ é par, onde
+			$x_n$ é a sucessão definida na equação \ref{eq:1.3-8}.
+		\end{proposition}
+\end{enumerate}
+
+
+\exercicio{9}
+
+\exercicio{11}
+
+\exercicio{14}
+
+\exercicio{17}
