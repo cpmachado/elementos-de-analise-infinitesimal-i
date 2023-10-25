@@ -1,0 +1,11 @@
+\newcommand{\exercicio}[1]{
+	\begin{flushleft}
+		\large #1.
+	\end{flushleft}
+	\phantomsection
+	\addcontentsline{toc}{section}{Exercício #1}
+	\addtocounter{section}{1}
+	\setcounter{proposition}{0}
+}
+
+\newtheorem{proposition}{Proposição}[section]
