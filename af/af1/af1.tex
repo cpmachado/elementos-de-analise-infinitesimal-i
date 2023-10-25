@@ -43,10 +43,18 @@
 
 \exercicio{1}
 
-\begin{equation}
-	\left\{\frac{1}{n}: n \in \mathbb{N}\right\}
+\paragraph{} Para simplificar a notação, atribuímos a letra A ao conjunto
+definido em (\ref{conj:af1-1}).
+
+\begin{equation}\label{conj:af1-1}
+	A = \left\{\frac{1}{n}: n \in \mathbb{N}\right\}
 \end{equation}
 
+\begin{align*}
+	\text{inf}(A) &= 0\\
+	\text{sup}(A) &= \text{max}(A) = 1\\
+	\text{min}(A) &\text{ não existe dado que $0 \not\in A$.}
+\end{align*}
 
 \exercicio{2}
 
@@ -54,6 +62,22 @@
 	$(n!)^2 > n^2 2^n, \quad \forall n \geq 4$
 \end{proposition}
 
+\begin{proof}
+\hfill
+\begin{enumerate}[label=\arabic*.]
+	\item Começamos com o caso $n = 4$: temos $(4!)^2 = 576 > 256 = 4^2 \cdot
+		2^4$, que é
+		uma afirmação verdadeira.
+	\item Fixamos agora um $n \in \mathbb{N}: n\geq 4$ e assumimos que
+		\begin{align*}
+			(n!)^2 &> n^2 2^n
+			\quad \text{(Hipótese de Indução)}.
+			\intertext{Queremos mostrar que:}
+			[(n+1)!]^2 &> (n + 1)^2 2^{n + 1}
+			\quad \text{(Tese de Indução)}
+		\end{align*}
+\end{enumerate}
+\end{proof}
 \clearpage
 
 \exercicio{3}
