@@ -40,11 +40,33 @@
 					tem-se que $x_n > 0$.
 			\end{enumerate}
 		\end{proof}
+		\clearpage
 	\item
 		\begin{proposition}
 			Para qualquer $n \in \mathbb{N}$, tem-se que $x_n$ é par, onde
 			$x_n$ é a sucessão definida na equação \ref{eq:1.3-8}.
 		\end{proposition}
+		\begin{proof}
+			\hfill
+			\begin{enumerate}[label=\arabic*.]
+				\item Começamos com o caso $n = 1$: temos $x_1 = 1(1 + 1) = 2$
+					é par, que é uma afirmação verdadeira.
+				\item Fixamos agora um $n \in \mathbb{N}$ e assumimos que
+					\begin{align*}
+						x_n &\text{ é par} \quad \text{(Hipótese de Indução)}.
+						\intertext{Queremos mostrar que:}
+						x_{n + 1} &\text{ é par} \quad \text{(Tese de Indução)}
+					\end{align*}
+					Começamos por considerar a definição do termo $x_{n + 1}$,
+					que é $x_n(x_n + 1)$. Pela Hipótese de Indução, temos que
+					$x_n \in \mathbb{N}$ e que é par, logo $x_{n + 1}$ vai ser
+					o produto de um número par pelo seu sucessor, que
+					forçosamente leva a que o produto tenha 2 como divisor e
+					seja par.\\
+					Deste modo provamos que para qualquer $n\in\mathbb{N}$,
+					tem-se que $x_n$ é par.
+			\end{enumerate}
+		\end{proof}
 \end{enumerate}
 
 
