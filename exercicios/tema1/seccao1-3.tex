@@ -1,0 +1,155 @@
+\seccao{1.3: Sucessões e indução}
+
+\exercicio{8}
+
+\begin{equation}\label{eq:1.3-8}
+	x_n =
+	\begin{cases}
+		1, &n = 0\\
+		x_{n - 1}(x_{n - 1} + 1), &n \in \mathbb{N}_0
+	\end{cases}
+\end{equation}
+
+\begin{enumerate}[label=(\alph*)]
+	\item
+		\begin{proposition}
+			Para qualquer $n \in \mathbb{N}_0$, tem-se que $x_n > 0$, onde
+			$x_n$ é a sucessão definida na equação \ref{eq:1.3-8}.
+		\end{proposition}
+		\begin{proof}
+			\hfill
+			\begin{enumerate}[label=\arabic*.]
+				\item Começamos com o caso $n = 0$: temos $x_0 = 1 > 0$, que é
+					uma afirmação verdadeira.
+				\item Fixamos agora um $n \in \mathbb{N}_0$ e assumimos que
+					\begin{align*}
+						x_n &> 0 \quad \text{(Hipótese de Indução)}.
+						\intertext{Queremos mostrar que:}
+						x_{n + 1} &> 0 \quad \text{(Tese de Indução)}
+						\intertext{Procedemos ao Passo de Indução, ao começar
+						com a inequação da Hipótese assumida:}
+						x_n &> 0 \\
+						\iff x_n + 1 &> 1 \\
+						\iff x_n(x_n + 1) &> x_n > 0
+						\quad \text{(Pela Hip. de Indução)}
+						\intertext{Dado que $x_{n + 1} = x_n(x_n + 1)$,
+						podemos concluir que}
+						x_{n + 1} = x_n(x_n + 1) &> x_n > 0
+					\end{align*}
+					Deste modo provamos que para qualquer $n\in\mathbb{N}_0$,
+					tem-se que $x_n > 0$.
+			\end{enumerate}
+		\end{proof}
+		\clearpage
+	\item
+		\begin{proposition}
+			Para qualquer $n \in \mathbb{N}$, tem-se que $x_n$ é par, onde
+			$x_n$ é a sucessão definida na equação \ref{eq:1.3-8}.
+		\end{proposition}
+		\begin{proof}
+			\hfill
+			\begin{enumerate}[label=\arabic*.]
+				\item Começamos com o caso $n = 1$: temos $x_1 = 1(1 + 1) = 2$
+					é par, que é uma afirmação verdadeira.
+				\item Fixamos agora um $n \in \mathbb{N}$ e assumimos que
+					\begin{align*}
+						x_n &\text{ é par} \quad \text{(Hipótese de Indução)}.
+						\intertext{Queremos mostrar que:}
+						x_{n + 1} &\text{ é par} \quad \text{(Tese de Indução)}
+					\end{align*}
+					Começamos por considerar a definição do termo $x_{n + 1}$,
+					que é $x_n(x_n + 1)$. Pela Hipótese de Indução, temos que
+					$x_n \in \mathbb{N}$ e que é par, logo $x_{n + 1}$ vai ser
+					o produto de um número par pelo seu sucessor, que
+					forçosamente leva a que o produto tenha 2 como divisor e
+					seja par.\\
+					Deste modo provamos que para qualquer $n\in\mathbb{N}$,
+					tem-se que $x_n$ é par.
+			\end{enumerate}
+		\end{proof}
+\end{enumerate}
+
+\clearpage
+
+\exercicio{9}
+
+\begin{proposition} \label{prop:1.3-9}
+	Para $n$ par, $(-1)^n = 1$, e para $n$ ímpar, $(-1)^n = -1$.
+\end{proposition}
+
+\begin{proof}
+	\hfill \\
+	De modo a provar a proposição \ref{prop:1.3-9}, temos de provar
+	separadamente se: $n$ é par, então $(-1)^n = 1$;
+	e se $n$ é ímpar, então $(-1)^n = -1$. \\
+	Vamos começar por provar se $n$ é par, então $(-1)^n = 1$. Comecemos por
+	observar que para garantir que $n$ é par, vamos considerar antes a
+	proposição $(-1)^{2n} = 1$.\\
+	\begin{enumerate}[label=\arabic*.]
+		\item Começamos com o caso $n = 1$: temos $(-1)^2 = 1$,
+			que é uma afirmação verdadeira.
+		\item Fixamos agora um $n \in \mathbb{N}$ e assumimos que
+			\begin{align*}
+				(-1)^{2n} &=1 \quad \text{(Hipótese de Indução)}.
+				\intertext{Queremos mostrar que:}
+				(-1)^{2(n+1)}&=1 \quad \text{(Tese de Indução)}
+				\intertext{Começamos por considerar a Tese de Indução:}
+				(-1)^{2(n+1)}
+				&= (-1)^{2n + 2} \\
+				&= (-1)^{2n} \cdot (-1)^2\\
+				&= 1 \cdot 1 \quad\text{(Pela Hipótese de Indução)}\\
+				&= 1
+			\end{align*}
+	\end{enumerate}
+	Deste modo fica provado que se $n$ é par, $(-1)^n = 1$.\\
+	Agora vamos demonstrar que se $n$ é ímpar, $(-1)^n = -1$. De forma
+	semelhante, vamos considerar antes a proposição $(-1)^{2n - 1} = -1$, de
+	modo a garantir que $n$ é ímpar.
+	\begin{enumerate}[label=\arabic*.]
+		\item Começamos com o caso $n = 1$: temos $(-1)^1 = -1$,
+			que é uma afirmação verdadeira.
+		\item Fixamos agora um $n \in \mathbb{N}$ e assumimos que
+			\begin{align*}
+				(-1)^{2n - 1} &= -1 \quad \text{(Hipótese de Indução)}.
+				\intertext{Queremos mostrar que:}
+				(-1)^{2(n+1) - 1}&=-1 \quad \text{(Tese de Indução)}
+				\intertext{Começamos por considerar a Tese de Indução:}
+				(-1)^{2(n+1) - 1}
+				&= (-1)^{2n + 2 - 1} \\
+				&= (-1)^{2n - 1} \cdot (-1)^2\\
+				&= (-1) \cdot 1 \quad\text{(Pela Hipótese de Indução)}\\
+				&= -1
+			\end{align*}
+	\end{enumerate}
+	Deste modo fica provado que se $n$ é ímpar, $(-1)^n = -1$.\\
+	Provados ambos casos, a proposição \ref{prop:1.3-9} fica provada.\\
+\end{proof}
+
+
+\clearpage
+\exercicio{11}
+
+\begin{proposition}
+	$2n - 3 < 2^{n - 2}$, para todo o inteiro $n\geq 5$.
+\end{proposition}
+
+\exercicio{14}
+
+\begin{equation}\label{eq:1.3-14}
+	x_n =
+	\begin{cases}
+		1, &n = 1\\
+		\frac{2x_{n - 1} + 3}{4}, &n \geq 1
+	\end{cases}
+\end{equation}
+
+\begin{proposition}
+	Para qualquer $n \in \mathbb{N}$, tem-se que $x_n < \frac{3}{2}$, onde
+	$x_n$ é a sucessão definida na equação \ref{eq:1.3-14}.
+\end{proposition}
+
+\exercicio{17}
+
+\begin{proposition}
+	Para qualquer $n \in \mathbb{N}_0$, tem-se que $a^nb^n = (ab)^n$.
+\end{proposition}

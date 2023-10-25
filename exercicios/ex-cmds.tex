@@ -1,0 +1,19 @@
+\newcommand{\seccao}[1]{
+	\begin{center}
+		\fbox{
+			\bfseries \Large Secção #1
+		}
+	\end{center}
+	\phantomsection
+	\addcontentsline{toc}{section}{Secção #1}
+}
+
+\newcommand{\exercicio}[1]{
+	\begin{flushleft}
+		\large #1.
+	\end{flushleft}
+	\phantomsection
+	\addcontentsline{toc}{subsection}{#1.}
+}
+
+\newtheorem{proposition}{Proposição}
