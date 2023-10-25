@@ -6,7 +6,7 @@
 	x_n =
 	\begin{cases}
 		1, &n = 0\\
-		x_n(x_n + 1), &n \in \mathbb{N}_0
+		x_{n - 1}(x_{n - 1} + 1), &n \in \mathbb{N}_0
 	\end{cases}
 \end{equation}
 
@@ -72,8 +72,34 @@
 
 \exercicio{9}
 
+\begin{proposition}
+	Para $n$ par, $(-1)^n = 1$, e para $n$ ímpar, $(-1)^n = -1$.
+\end{proposition}
+
+
 \exercicio{11}
+
+\begin{proposition}
+	$2n - 3 < 2^{n - 2}$, para todo o inteiro $n\geq 5$.
+\end{proposition}
 
 \exercicio{14}
 
+\begin{equation}\label{eq:1.3-14}
+	x_n =
+	\begin{cases}
+		1, &n = 1\\
+		\frac{2x_{n - 1} + 3}{4}, &n \geq 1
+	\end{cases}
+\end{equation}
+
+\begin{proposition}
+	Para qualquer $n \in \mathbb{N}$, tem-se que $x_n < \frac{3}{2}$, onde
+	$x_n$ é a sucessão definida na equação \ref{eq:1.3-14}.
+\end{proposition}
+
 \exercicio{17}
+
+\begin{proposition}
+	Para qualquer $n \in \mathbb{N}_0$, tem-se que $a^nb^n = (ab)^n$.
+\end{proposition}
