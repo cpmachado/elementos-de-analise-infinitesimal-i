@@ -23,16 +23,21 @@
 					uma afirmação verdadeira.
 				\item Fixamos agora um $n \in \mathbb{N}_0$ e assumimos que
 					\begin{align*}
-						&\text{Hipótese}:\quad  x_n > 0.
+						x_n &> 0 \quad \text{(Hipótese de Indução)}.
 						\intertext{Queremos mostrar que:}
-						&\text{Tese}: \quad\quad  x_{n + 1} > 0.
-						\intertext{Comecemos por considerar a Hipótese,}
-						&x_n > 0 \iff x_n + 1 > 1
-						\intertext{Pela Hipótese, podemos
-							multiplicar ambos os termos da inequação sem
-						inverter o sinal, pelo que se tem}
-						&x_{n + 1} = x_n(x_n + 1) > x_n > 0
+						x_{n + 1} &> 0 \quad \text{(Tese de Indução)}
+						\intertext{Procedemos ao Passo de Indução, ao começar
+						com a inequação da Hipótese assumida:}
+						x_n &> 0 \\
+						\iff x_n + 1 &> 1 \\
+						\iff x_n(x_n + 1) &> x_n > 0
+						\quad \text{(Pela Hip. de Indução)}
+						\intertext{Dado que $x_{n + 1} = x_n(x_n + 1)$,
+						podemos concluir que}
+						x_{n + 1} = x_n(x_n + 1) &> x_n > 0
 					\end{align*}
+					Deste modo provamos que para qualquer $n\in\mathbb{N}_0$,
+					tem-se que $x_n > 0$.
 			\end{enumerate}
 		\end{proof}
 	\item
