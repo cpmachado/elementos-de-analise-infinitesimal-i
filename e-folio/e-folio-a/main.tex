@@ -1,0 +1,67 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[ddmmyyyy]{datetime}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{biblatex}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{thmtools}
+\usepackage{titling}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+
+\graphicspath{{e-folio/e-folio-a/imagem}}
+\addbibresource{bibliografia.bib}
+
+% Ambientes de provas e demonstrações
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{proposition}{Proposição}[theorem]
+\renewcommand\qedsymbol{\textbf{q.e.d.}}
+
+% Dados
+\author{Carlos Augusto Gonçalves Collaço e Pinto Machado}
+\newcommand{\numeroEstudante}{2200909}
+\newcommand{\UC}{Elementos de Análise Infinitesimal I}
+\newcommand{\codigoUC}{21030}
+\newcommand{\docentes}{Maria João Oliveira}
+\newcommand{\curso}{Licenciatura em Matemática e Aplicações}
+\newcommand{\turma}{2}
+\newcommand{\anoLectivo}{2023-2024}
+\date{\today}
+
+\title{\numeroEstudante - \UC | \codigoUC - \theauthor}
+
+\pagenumbering{arabic}
+
+\hypersetup{
+	pdftitle={\thetitle},
+	pdfsubject={\thetitle},
+	pdfauthor={\theauthor},
+	pdfkeywords={\thetitle}
+}
+
+\makeindex
+
+\input{e-folio/ef-cmds}
+
+\begin{document}
+
+\input{e-folio/e-folio-a/capa/default}
+
+\clearpage
+
+
+\clearpage
+
+\nocite{*}
+\printbibliography[heading=bibintoc,title={Bibliografia}]
+
+\end{document}
