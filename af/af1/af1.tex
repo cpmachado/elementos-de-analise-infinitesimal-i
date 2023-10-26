@@ -43,17 +43,27 @@
 
 \exercicio{1}
 
-\paragraph{} Para simplificar a notação, atribuímos a letra A ao conjunto
-definido em (\ref{conj:af1-1}).
-
-\begin{equation}\label{conj:af1-1}
-	A = \left\{\frac{1}{n}: n \in \mathbb{N}\right\}
-\end{equation}
 
 \begin{align*}
-	\text{inf}(A) &= 0\\
-	\text{sup}(A) &= \text{max}(A) = 1\\
-	\text{min}(A) &\text{ não existe dado que $0 \not\in A$.}
+	\intertext{Começamos por averiguar se a sucessão $\frac{1}{n}$ é
+		decrescente, ao calcular a diferença entre um termo $n + 1$ e um termo $n$ e
+		verificar se este é inferior a zero.}
+	\frac{1}{n + 1}- \frac{1}{n} & = \frac{n - (n + 1)}{n(n+1)} =
+	-\frac{1}{n(n+1)}                                                                                                   \\
+	\intertext{Dado que $n(n+1) > 0$, para todo o $n \in \mathbb{N}$, podemos
+		concluir que a sucessão é decrescente. Deste modo o supremo da sucessão é
+		o primeiro termo da sucessão.}
+	\text{sup}\left\{\frac{1}{n}: n \in \mathbb{N}\right\}
+	                             & = \text{max}\left\{\frac{1}{n}: n \in \mathbb{N}\right\}
+	= \frac{1}{1}= 1
+	\intertext{O máximo existe dado que 1 pertence ao conjunto. Do mesmo
+		modo podemos observar que a sucessão é limitada, dado que para
+		qualquer $n \in \mathbb{N}$, $\frac{1}{n} > 0$. Por consequência, o ínfimo
+		do conjunto vai ser o limite da sucessão de $n \to \infty$.}
+	\text{inf}\left\{\frac{1}{n}: n \in \mathbb{N}\right\}
+	                             & = \lim_{n} \frac{1}{n} = 0                                                           \\
+	\text{min}\left\{\frac{1}{n}: n \in \mathbb{N}\right\}
+	                             & \text{ não existe dado que } 0 \not\in \left\{\frac{1}{n}: n \in \mathbb{N}\right\}.
 \end{align*}
 
 \exercicio{2}
@@ -63,20 +73,20 @@ definido em (\ref{conj:af1-1}).
 \end{proposition}
 
 \begin{proof}
-\hfill
-\begin{enumerate}[label=\arabic*.]
-	\item Começamos com o caso $n = 4$: temos $(4!)^2 = 576 > 256 = 4^2 \cdot
-		2^4$, que é
-		uma afirmação verdadeira.
-	\item Fixamos agora um $n \in \mathbb{N}: n\geq 4$ e assumimos que
-		\begin{align*}
-			(n!)^2 &> n^2 2^n
-			\quad \text{(Hipótese de Indução)}.
-			\intertext{Queremos mostrar que:}
-			[(n+1)!]^2 &> (n + 1)^2 2^{n + 1}
-			\quad \text{(Tese de Indução)}
-		\end{align*}
-\end{enumerate}
+	\hfill
+	\begin{enumerate}[label=\arabic*.]
+		\item Começamos com o caso $n = 4$: temos $(4!)^2 = 576 > 256 = 4^2 \cdot
+			      2^4$, que é
+		      uma afirmação verdadeira.
+		\item Fixamos agora um $n \in \mathbb{N}: n\geq 4$ e assumimos que
+		      \begin{align*}
+			      (n!)^2     & > n^2 2^n
+			      \quad \text{(Hipótese de Indução)}.
+			      \intertext{Queremos mostrar que:}
+			      [(n+1)!]^2 & > (n + 1)^2 2^{n + 1}
+			      \quad \text{(Tese de Indução)}
+		      \end{align*}
+	\end{enumerate}
 \end{proof}
 \clearpage
 
@@ -84,57 +94,57 @@ definido em (\ref{conj:af1-1}).
 
 \begin{equation}
 	\begin{cases}
-		a_1 = \frac{1}{4}\\
+		a_1 = \frac{1}{4} \\
 		a_{n + 1} = (a^2_n + 1) \frac{a_n}{2}, n \in \mathbb{N}
 	\end{cases}
 \end{equation}
 
 \begin{enumerate}[label=\arabic{section}.\arabic*.]
 	\item
-		\begin{proposition}
-			$a_n \in ]0, 1[, \quad \forall n \in \mathbb{N}$
-		\end{proposition}
+	      \begin{proposition}
+		      $a_n \in ]0, 1[, \quad \forall n \in \mathbb{N}$
+	      \end{proposition}
 	\item
-		\begin{proposition}
-			A sucessão de $a_n$ é decrescente.
-		\end{proposition}
+	      \begin{proposition}
+		      A sucessão de $a_n$ é decrescente.
+	      \end{proposition}
 	\item
-		\begin{proposition}
-			A sucessão de $a_n$ é convergente.
-		\end{proposition}
-		\begin{align*}
-			\lim_{n} a_n =
-		\end{align*}
+	      \begin{proposition}
+		      A sucessão de $a_n$ é convergente.
+	      \end{proposition}
+	      \begin{align*}
+		      \lim_{n} a_n =
+	      \end{align*}
 	\item
-		\begin{proposition}
-			Se $a_n$ é um subsucessão de uma sucessão limitada $b_n$, $b_n$ é
-			convergente.
-		\end{proposition}
+	      \begin{proposition}
+		      Se $a_n$ é um subsucessão de uma sucessão limitada $b_n$, $b_n$ é
+		      convergente.
+	      \end{proposition}
 \end{enumerate}
 
 \exercicio{4}
 
 \begin{equation}
 	\begin{cases}
-		u_1 = 2\\
+		u_1 = 2 \\
 		u_{n + 1} = (n^2 + 1)u_n, \quad n \in \mathbb{N}
 	\end{cases}
 \end{equation}
 
 \begin{enumerate}[label=\arabic{section}.\arabic*.]
 	\item
-		\begin{proposition}
-			Para todo $n \in \mathbb{N}$, tem-se que $\frac{u_n}{n!}\geq 2$.
-		\end{proposition}
+	      \begin{proposition}
+		      Para todo $n \in \mathbb{N}$, tem-se que $\frac{u_n}{n!}\geq 2$.
+	      \end{proposition}
 	\item Monotonia de $u_n$
 	\item
-		\begin{proposition}
-			Existe um termo de $u_n$ que seja igual a 150.
-		\end{proposition}
+	      \begin{proposition}
+		      Existe um termo de $u_n$ que seja igual a 150.
+	      \end{proposition}
 	\item
-		\begin{proposition}
-			Existe limite da sucessão $u_n$.
-		\end{proposition}
+	      \begin{proposition}
+		      Existe limite da sucessão $u_n$.
+	      \end{proposition}
 \end{enumerate}
 
 \clearpage
@@ -143,35 +153,35 @@ definido em (\ref{conj:af1-1}).
 
 \begin{enumerate}[label=\arabic{section}.\arabic*.]
 	\item
-		\begin{equation}
-			0 < (n + 1)^\frac{1}{4}-n^\frac{1}{4}\leq n^{-\frac{3}{4}}, \quad
-			n \in \mathbb{N}
-		\end{equation}
+	      \begin{equation}
+		      0 < (n + 1)^\frac{1}{4}-n^\frac{1}{4}\leq n^{-\frac{3}{4}}, \quad
+		      n \in \mathbb{N}
+	      \end{equation}
 	\item
-		\begin{align*}
-			\lim_{n} \left(\sqrt[4]{n + 1}-\sqrt[4]{n}\right)
-		\end{align*}
+	      \begin{align*}
+		      \lim_{n} \left(\sqrt[4]{n + 1}-\sqrt[4]{n}\right)
+	      \end{align*}
 \end{enumerate}
 
 \exercicio{6}
 
 \begin{enumerate}[label=\arabic{section}.\arabic*.]
 	\item
-		\begin{equation}
-			\sum_{n=1}^{\infty} \frac{n - 1}{\sqrt{n^3 + 2n^2 + 2}}
-		\end{equation}
+	      \begin{equation}
+		      \sum_{n=1}^{\infty} \frac{n - 1}{\sqrt{n^3 + 2n^2 + 2}}
+	      \end{equation}
 	\item
-		\begin{equation}
-			\sum_{n=1}^{\infty} \left(\frac{2n}{3n -2\sqrt{n}}\right)^n
-		\end{equation}
+	      \begin{equation}
+		      \sum_{n=1}^{\infty} \left(\frac{2n}{3n -2\sqrt{n}}\right)^n
+	      \end{equation}
 	\item
-		\begin{equation}
-			\sum_{n=1}^{\infty} \left(\frac{2}{n^2}\right)^n n!
-		\end{equation}
+	      \begin{equation}
+		      \sum_{n=1}^{\infty} \left(\frac{2}{n^2}\right)^n n!
+	      \end{equation}
 	\item
-		\begin{equation}
-			\sum_{n=1}^{\infty} (-1)^n \frac{1}{\sqrt[3]{n}}
-		\end{equation}
+	      \begin{equation}
+		      \sum_{n=1}^{\infty} (-1)^n \frac{1}{\sqrt[3]{n}}
+	      \end{equation}
 \end{enumerate}
 
 \clearpage
@@ -185,13 +195,13 @@ definido em (\ref{conj:af1-1}).
 
 \begin{enumerate}[label=\arabic{section}.\arabic*.]
 	\item
-		\begin{proposition}
-			A série é absolutamente convergente se, e só se, $\alpha > 2$.
-		\end{proposition}
+	      \begin{proposition}
+		      A série é absolutamente convergente se, e só se, $\alpha > 2$.
+	      \end{proposition}
 	\item
-		\begin{proposition}
-			Para $\alpha \leq 1$, a série diverge.
-		\end{proposition}
+	      \begin{proposition}
+		      Para $\alpha \leq 1$, a série diverge.
+	      \end{proposition}
 \end{enumerate}
 
 \exercicio{8}
@@ -207,13 +217,13 @@ definido em (\ref{conj:af1-1}).
 
 \begin{enumerate}[label=\arabic{section}.\arabic*.]
 	\item
-		\begin{proposition}
-			A série $\sum_{n=1}^{\infty} \frac{a_n^2}{1 + b_n}$ é convergente.
-		\end{proposition}
+	      \begin{proposition}
+		      A série $\sum_{n=1}^{\infty} \frac{a_n^2}{1 + b_n}$ é convergente.
+	      \end{proposition}
 	\item
-		\begin{proposition}
-			A série $\sum_{n=1}^{\infty} \left(a_n + \frac{1}{b_n}\right)$ é convergente.
-		\end{proposition}
+	      \begin{proposition}
+		      A série $\sum_{n=1}^{\infty} \left(a_n + \frac{1}{b_n}\right)$ é convergente.
+	      \end{proposition}
 \end{enumerate}
 
 %\nocite{*}
