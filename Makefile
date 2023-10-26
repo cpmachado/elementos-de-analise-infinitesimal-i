@@ -1,11 +1,11 @@
 SRC =\
-	e-folio/e-folio-a/main.tex\
+	e-folio/e-folio-a/2200909efolioA.tex\
 	exercicios/tema1/exercicios-tema1.tex
 DOCS =\
 	exercicios-tema1.pdf\
 	main.pdf
 
-main.pdf: e-folio/e-folio-a/main.tex
+2200909efolioA.pdf: e-folio/e-folio-a/2200909efolioA.tex
 	latexmk $(PV) -use-make -pdf $< --auxdir=aux
 
 exercicios-tema1.pdf: exercicios/tema1/exercicios-tema1.tex
