@@ -1,19 +1,17 @@
 \newcommand{\seccao}[1]{
-	\begin{center}
-		\fbox{
-			\bfseries \Large Secção #1
-		}
-	\end{center}
+	\chapter*{Secção #1}
 	\phantomsection
-	\addcontentsline{toc}{section}{Secção #1}
+	\addcontentsline{toc}{chapter}{Secção #1}
 }
 
 \newcommand{\exercicio}[1]{
-	\begin{flushleft}
-		\large #1.
-	\end{flushleft}
+	\section*{#1.}
 	\phantomsection
-	\addcontentsline{toc}{subsection}{#1.}
+	\addcontentsline{toc}{section}{#1.}
+	\setcounter{exercicio}{#1}
+	\setcounter{proposition}{0}
 }
 
-\newtheorem{proposition}{Proposição}
+\newcounter{exercicio}
+
+\newtheorem{proposition}{Proposição}[exercicio]
