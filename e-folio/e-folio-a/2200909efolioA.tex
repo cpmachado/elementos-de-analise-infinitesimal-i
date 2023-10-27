@@ -69,7 +69,7 @@
 
 \begin{enumerate}[label=\arabic{section}.\arabic*.]
 	\item
-	      \begin{proposition}
+	      \begin{proposition}\label{prop:efa-1a}
 		      Para qualquer $n \in \mathbb{N}$, tem-se que $0 < v_n\leq 1$.
 	      \end{proposition}
 	      \begin{proof}
@@ -99,6 +99,24 @@
 	      \begin{proposition}
 		      A sucessão $v_n$ é monótona.
 	      \end{proposition}
+	      \begin{proof}
+		      \; \\
+		      De modo a verificar se a sucessão é monótona, vamos verificar se
+		      $v_{n+1} - v_n$ é positivo ou negativo.
+		      \begin{align*}
+			      v_{n + 1} - v_n = \frac{v_n^2}{1 + v_n} - v_n
+			      = \frac{v_n^2-v_n(1 + v_n)}{1 + v_n}
+			      = -\frac{v_n}{1 + v_n}
+		      \end{align*}
+		      Com base na proposição \ref{prop:efa-1a}, tem-se que
+		      \begin{align*}
+			      0 < v_n \leq 1 \iff 1 < 1 + v_n \implies
+			      v_{n + 1} - v_n = -\frac{v_n}{1 + v_n} < 0
+		      \end{align*}
+		      Que nos permite concluir que a sucessão $v_n$ é estritamente
+		      decrescente e monótona.\\
+	      \end{proof}
+	      \clearpage
 	\item \hfill
 	      \begin{enumerate}[label=\arabic{section}.\arabic{enumi}.\arabic*.]
 		      \item
