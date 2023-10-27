@@ -5,6 +5,9 @@ DOCS =\
 	2200909efolioA.pdf\
 	exercicios-tema1.pdf
 
+all: ${DOCS}
+	@echo todos recursos compilados
+
 2200909efolioA.pdf: e-folio/e-folio-a/2200909efolioA.tex
 	latexmk $(PV) -use-make -pdf $< --auxdir=aux
 
@@ -14,4 +17,4 @@ exercicios-tema1.pdf: exercicios/tema1/exercicios-tema1.tex
 clean:
 	rm -rf aux ${DOCS}
 
-.PHONY: clean
+.PHONY: all clean ${DOCS}
