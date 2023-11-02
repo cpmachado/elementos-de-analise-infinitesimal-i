@@ -1,9 +1,40 @@
 \exercicio{}
 
-\begin{align*}
+\begin{equation}\label{eq:efa-2}
 	\sum_{n=0}^{\infty} \frac{1}{1 + \alpha^{2n}}
-\end{align*}
+\end{equation}
+
+\paragraph{} Seja $\alpha \in \mathbb{R}$, pretende-se determinar os valores
+para qual a série, definida em \ref{eq:efa-2}, converge.
+
+\paragraph{}Um requisito de convergência, de acordo com Teorema
+4\footcite[pág. 579]{Santos2016}, alínea 1, a série só converge se o termo
+geral convergir para 0.
 
 \begin{align*}
-	(1 + \alpha^{2n})^{-1}
+	\intertext{Começamos por observar que}
+	\alpha^{2n}
+	&= (\alpha^n)^2 \geq 0
+	\intertext{Que nos permite calcular caso a caso, para onde tende o limite
+	do denominador, donde calculamos o limite do termo geral.}
+	\intertext{Se $|\alpha| < 1$, tem-se que}
+	\lim_{n \to \infty} 1 + \alpha^{2n}
+	&= 1
+	\iff \lim_{n \to \infty} \frac{1}{1 + a^{2n}} = 1.
+	\intertext{Se $|\alpha| = 1$, tem-se que}
+	\lim_{n \to \infty} 1 + \alpha^{2n}
+	&= 2
+	\iff \lim_{n \to \infty} \frac{1}{1 + a^{2n}} = \frac{1}{2}.
+	\intertext{Se $|\alpha| > 1$, tem-se que}
+	\lim_{n \to \infty} 1 + \alpha^{2n}
+	&= +\infty
+	\iff \lim_{n \to \infty} \frac{1}{1 + a^{2n}} = 0.
 \end{align*}
+
+\paragraph{} Estes resultados, permitem-nos concluir que a série
+$\sum_{n=0}^{\infty} \frac{1}{1+\alpha^{2n}}$ converge para
+$\alpha \in ]-\infty, -1[ \cup ]1, +\infty[$.
+
+
+
+
