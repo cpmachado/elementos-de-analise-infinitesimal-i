@@ -1,0 +1,36 @@
+\exercicio{}
+
+\begin{equation}\label{eq:efa-2}
+	\sum_{n=0}^{\infty} \frac{1}{1 + \alpha^{2n}}
+\end{equation}
+
+\paragraph{} Seja $\alpha \in \mathbb{R}$, pretende-se determinar os valores
+de $\alpha$ para qual a série, definida em \ref{eq:efa-2}, converge.
+
+\begin{align*}
+	\intertext{Começamos por observar que}
+	\alpha^{2n}
+	&= (\alpha^n)^2 \geq 0
+	\intertext{Se $|\alpha| < 1$, tem-se que}
+	\lim_{n \to \infty} 1 + \alpha^{2n}
+	&= 1
+	\iff \lim_{n \to \infty} \frac{1}{1 + a^{2n}} = 1.
+	\intertext{Se $|\alpha| = 1$, tem-se que}
+	\lim_{n \to \infty} 1 + \alpha^{2n}
+	&= 2
+	\iff \lim_{n \to \infty} \frac{1}{1 + a^{2n}} = \frac{1}{2}.
+	\intertext{Se $|\alpha| > 1$, tem-se que}
+	\lim_{n \to \infty} 1 + \alpha^{2n}
+	&= +\infty
+	\iff \lim_{n \to \infty} \frac{1}{1 + a^{2n}} = 0.
+\end{align*}
+
+\paragraph{}Pela alínea 1 do Teorema
+4\footcite[pág. 579]{Santos2016}, a série só converge se o termo
+geral convergir para 0. Logo, a série
+$\sum_{n=0}^{\infty} \frac{1}{1+\alpha^{2n}}$ é convergente para
+$\alpha \in ]-\infty, -1[ \cup ]1, +\infty[$.
+
+
+
+
